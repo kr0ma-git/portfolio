@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
+import Grain from "./Grain";
 
-// One orchestrated load-in: each line steps in slightly after the last.
-// This is the single "boldness" moment for the page -- everything else
-// (nav links, list hovers) reacts to the user instead of animating on its own.
 const container = {
   hidden: {},
   show: {
@@ -15,7 +13,10 @@ const line = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const },
+    transition: {
+      duration: 0.7,
+      ease: [0.16, 1, 0.3, 1] as const,
+    },
   },
 };
 
@@ -25,12 +26,15 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-screen items-center overflow-hidden"
     >
-      {/* Gradient-mesh backdrop. Swap this for a colir.space export (as a
-          background-image) once you have one you like -- the radial stack
-          below is just a placeholder in the same cool/muted palette. */}
+      {/* ShaderGradient background */}
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <Grain />
+      </div>
+
+      {/* Gradient-mesh backdrop */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10"
+        className="pointer-events-none absolute inset-0 z-0"
         style={{
           background:
             "radial-gradient(60% 50% at 20% 20%, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent), " +
@@ -38,21 +42,23 @@ export default function Hero() {
         }}
       />
 
+      {/* Content */}
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-5xl px-6 md:px-10"
+        className="relative z-10 mx-auto max-w-5xl px-6 md:px-10"
       >
         <motion.h1
           variants={line}
-          className="font-display text-5xl leading-[1.05] tracking-tight text-text md:text-7xl"
+          className="font-display text-7xl leading-[1.05] tracking-tight text-text md:text-7xl"
         >
           Wayne Yano
         </motion.h1>
+
         <motion.p
           variants={line}
-          className="mt-6 max-w-md text-base leading-relaxed text-muted"
+          className="mt-6 max-w-md text-base leading-relaxed text-white"
         >
           Software Developer. Based in Cebu, Philippines.
         </motion.p>

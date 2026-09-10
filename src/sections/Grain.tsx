@@ -1,30 +1,41 @@
-/**
- * Full-viewport film-grain overlay.
- *
- * Why SVG feTurbulence instead of a PNG texture: it's resolution-independent
- * (no visible tiling seam on large screens), costs ~0kb of image weight, and
- * is trivial to re-tune (frequency = grain size, opacity = intensity).
- *
- * `pointer-events-none` + `fixed` so it sits above every section without
- * ever intercepting clicks or scroll.
- */
+import { ShaderGradient, ShaderGradientCanvas } from "@shadergradient/react";
+
 export default function Grain() {
   return (
-    <div
-      aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-50 opacity-[0.05] mix-blend-overlay"
-    >
-      <svg className="h-full w-full">
-        <filter id="grain">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0.85"
-            numOctaves="2"
-            stitchTiles="stitch"
-          />
-        </filter>
-        <rect width="100%" height="100%" filter="url(#grain)" />
-      </svg>
-    </div>
+    <ShaderGradientCanvas>
+      <ShaderGradient
+        animate="on"
+        brightness={0.7}
+        cAzimuthAngle={172}
+        cDistance={3.6}
+        cPolarAngle={128}
+        cameraZoom={1}
+        color1="#3dff57"
+        color2="#db3e39"
+        color3="#7ec0e1"
+        envPreset="city"
+        grain="on"
+        lightType="3d"
+        positionX={-1.4}
+        positionY={0}
+        positionZ={0}
+        range="disabled"
+        rangeEnd={40}
+        rangeStart={0}
+        reflection={0.1}
+        rotationX={0}
+        rotationY={10}
+        rotationZ={50}
+        shader="defaults"
+        type="plane"
+        uAmplitude={1}
+        uDensity={4.6}
+        uFrequency={5.5}
+        uSpeed={0.4}
+        uStrength={4}
+        uTime={0}
+        wireframe={false}
+      />
+    </ShaderGradientCanvas>
   );
 }
