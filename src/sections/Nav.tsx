@@ -21,7 +21,7 @@ const Nav = () => {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-muted transition-colors hover:text-text"
+                className="text-sm text-text transition-colors hover:text-text"
               >
                 {link.label}
               </a>
