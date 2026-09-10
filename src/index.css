@@ -1,1 +1,58 @@
 @import "tailwindcss";
+
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@theme {
+  /* Color: a cool near-black base with a single muted, desaturated accent.
+     Kept desaturated on purpose -- an acid/neon accent on near-black is the
+     generic "AI dark mode" tell; a quieter teal-grey reads more liminal /
+     underground-club than sci-fi-dashboard. */
+  --color-bg: #0b0c0e;
+  --color-surface: #131417;
+  --color-line: #24262a;
+  --color-text: #e7e6e2;
+  --color-muted: #8b8d93;
+  --color-accent: #7fa69e;
+  --color-accent-dim: #4e625e;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    background: var(--color-bg);
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-accent-dim);
+    color: var(--color-text);
+  }
+
+  /* Respect reduced-motion users globally; individual components can still
+     opt back in for essential feedback (not decoration). */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
