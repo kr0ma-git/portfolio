@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { techStackIcons } from "@/constants/const";
 import TechIcon from "@/components/Models/TechLogos/TechIcons";
 
-const list = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.08 },
-  },
-};
+// const list = {
+//   hidden: {},
+//   show: {
+//     transition: { staggerChildren: 0.08 },
+//   },
+// };
 
 const line = {
   hidden: {

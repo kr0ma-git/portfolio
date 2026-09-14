@@ -41,7 +41,8 @@ const defaultItems: OrbitStackItem[] = [
     accent: "#f8d66d",
     initials: "MV",
     stat: "Identity",
-    image: "/images/orbit-card-stack/mira-vale.png",
+    video: "",
+    link: "",
   },
   {
     name: "Noor Kade",
@@ -51,7 +52,8 @@ const defaultItems: OrbitStackItem[] = [
     accent: "#78dcca",
     initials: "NK",
     stat: "Roadmap",
-    image: "/images/orbit-card-stack/noor-kade.png",
+    video: "",
+    link: "",
   },
   {
     name: "Ari Chen",
@@ -61,7 +63,8 @@ const defaultItems: OrbitStackItem[] = [
     accent: "#f3f1ea",
     initials: "AC",
     stat: "Vision",
-    image: "/images/orbit-card-stack/ari-chen.png",
+    video: "",
+    link: "",
   },
   {
     name: "Sana Holt",
@@ -71,7 +74,8 @@ const defaultItems: OrbitStackItem[] = [
     accent: "#b9a7ff",
     initials: "SH",
     stat: "Motion",
-    image: "/images/orbit-card-stack/sana-holt.png",
+    video: "",
+    link: "",
   },
   {
     name: "Ezra Moon",
@@ -81,7 +85,8 @@ const defaultItems: OrbitStackItem[] = [
     accent: "#ff9d77",
     initials: "EM",
     stat: "Systems",
-    image: "/images/orbit-card-stack/ezra-moon.png",
+    video: "",
+    link: "",
   },
 ];
 

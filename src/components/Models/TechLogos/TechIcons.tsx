@@ -7,22 +7,22 @@
 
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect } from "react";
-import * as THREE from "three";
+// import { useEffect } from "react";
+// import * as THREE from "three";
 
-const TechIcon = ({ model }) => {
-  const scene = useGLTF(model.modelPath);
+const TechIcon = ({ model }: any) => {
+  const scene = useGLTF(model.modelPath) as any;
 
   // changing the color of the THREE.js model to white
-  useEffect(() => {
-    if (model.name === "Interactive Developer") {
-      scene.scene.traverse((child) => {
-        if (child.isMesh && child.name === "Object_5") {
-          child.material = new THREE.MeshStandardMaterial({ color: "white" });
-        }
-      });
-    }
-  }, [scene, model.name]);
+  // useEffect(() => {
+  //   if (model.name === "Interactive Developer") {
+  //     scene.scene.traverse((child: any) => {
+  //       if (child.isMesh && child.name === "Object_5") {
+  //         child.material = new THREE.MeshStandardMaterial({ color: "white" });
+  //       }
+  //     });
+  //   }
+  // }, [scene, model.name]);
 
   return (
     <Canvas>
