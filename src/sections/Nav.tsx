@@ -45,10 +45,7 @@ const Nav = () => {
           ))}
         </ul>
 
-        <a
-          href="/public/files/WayneYano_resume_2026_update.pdf"
-          target="_blank"
-        >
+        <a href="/files/WayneYano_resume_2026_update.pdf" target="_blank">
           <p className="text-text font-display">Download CV</p>
         </a>
       </nav>

@@ -122,7 +122,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "www.linkedin.com/in/wayne-kousuke-yano-53335a352"
+    href: "https://www.linkedin.com/in/wayne-kousuke-yano-53335a352"
   },
 ];
 
