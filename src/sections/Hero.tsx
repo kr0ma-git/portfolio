@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Grain from "./Grain";
+import Grain from "../components/Grain";
 
 const container = {
   hidden: {},
@@ -24,41 +24,43 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden"
+      className="relative flex min-h-[calc(100vh+5rem)] items-center overflow-hidden"
     >
       {/* ShaderGradient background */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <Grain />
       </div>
 
-      {/* Gradient-mesh backdrop */}
+      {/* Background bottom black gradient */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-13"
         style={{
           background:
-            "radial-gradient(60% 50% at 20% 20%, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent), " +
-            "radial-gradient(50% 40% at 85% 70%, color-mix(in srgb, var(--color-accent-dim) 25%, transparent), transparent)",
+            "linear-gradient(to bottom, transparent, var(--color-bg))",
         }}
       />
+
+      {/* Invisisble Marker */}
+      <div id="mark" className="absolute top-30"></div>
 
       {/* Content */}
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 mx-auto max-w-5xl px-6 md:px-10"
+        className="z-10 mx-auto mb-30 max-w-5xl px-6 md:px-10"
       >
         <motion.h1
           variants={line}
-          className="font-display text-7xl leading-[1.05] tracking-tight text-text md:text-7xl"
+          className="font-display tracking-wider text-7xl leading-[1.05] text-text md:text-7xl"
         >
           Wayne Yano
         </motion.h1>
 
         <motion.p
           variants={line}
-          className="mt-6 max-w-md text-base leading-relaxed text-white"
+          className="mt-6 max-w-md text-center mx-auto text-base leading-relaxed text-white"
         >
           Software Developer. Based in Cebu, Philippines.
         </motion.p>
