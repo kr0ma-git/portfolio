@@ -1,9 +1,9 @@
 import { OrbitCardStack } from "./OrbitCardStack";
-import { useState } from "react";
+// import { useState } from "react";
 import { projects } from "../../constants/const";
 
 export default function CardPreview() {
-  const [activeMember, setActiveMember] = useState(projects[2]!);
+  // const [activeMember, setActiveMember] = useState(projects[2]!);
 
   return (
     <section className="space-y-6">
@@ -13,7 +13,7 @@ export default function CardPreview() {
           defaultActiveIndex={2}
           spread={150}
           lift={40}
-          onActiveChange={(item) => setActiveMember(item)}
+          // onActiveChange={(item) => setActiveMember(item)}
         />
       </div>
 

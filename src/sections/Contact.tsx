@@ -1,5 +1,5 @@
 import { socials } from "@/constants/const";
-import ContactExperience from "../components/ContactExperience/ContactExperience";
+import ContactExperience from "@/components/ContactExperience/ContactExperience";
 
 export default function Contact() {
   return (
