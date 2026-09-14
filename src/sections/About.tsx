@@ -35,7 +35,7 @@ export default function About() {
       />
 
       <div className="pointer-events-none absolute opacity-5 md:scale-400 scale-900 sm:translate-y-100 md:translate-x-170 md:-translate-y-10 translate-y-100">
-        <img src="/public/images/stars2.png" alt="Stars" />
+        <img src="/images/stars2.png" alt="Stars" />
       </div>
 
       <div className="max-w-5xl mx-auto px-6 pt-15">

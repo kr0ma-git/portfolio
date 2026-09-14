@@ -32,7 +32,7 @@ const TechStack = () => {
     // the gradient cleanly within this section's own top/bottom edges.
     <section id="techstack" className="relative isolate mt-35 py-32">
       <div className="pointer-events-none absolute opacity-5">
-        <img src="/public/images/untitled3.png" alt="TechStack Background" />
+        <img src="/images/untitled3.png" alt="TechStack Background" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-13"
