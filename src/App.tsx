@@ -4,10 +4,12 @@ import Projects from "./sections/Projects";
 import Hero from "./sections/Hero";
 import Nav from "./sections/Nav";
 import TechStack from "./sections/TechStack";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
     <>
+      <Analytics />
       <Nav />
       <main className="overflow-x-hidden">
         <Hero />
