@@ -36,7 +36,7 @@ export default function Contact() {
           <div className="md:ml-10 mb-8 text-center md:mb-30 md:text-start">
             <a
               href="mailto:w4ynekousuke@gmail.com"
-              className="font-display text-3xl text-text transition-colors hover:text-accent md:text-5xl"
+              className="font-display text-2xl text-text transition-colors hover:text-accent md:text-5xl"
             >
               w4ynekousuke@gmail.com
             </a>
@@ -75,7 +75,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="min-h-96 min-w-1/2">
+        <div className="min-h-96 min-w-1/2 hidden md:inline">
           <ContactExperience />
         </div>
       </div>
